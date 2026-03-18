@@ -1,12 +1,22 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        var t = localStorage.getItem("compound-interest-calculator-theme");
+        if (t !== "dark" && t !== "light")
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.classList.toggle("dark", t === "dark");
+      })();
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/compound-interest-calculator/icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compound Interest Calculator</title>
-    <script type="module" crossorigin src="/compound-interest-calculator/assets/index-C-hD37YS.js"></script>
-    <link rel="stylesheet" crossorigin href="/compound-interest-calculator/assets/index-D3HWo7mi.css">
+    <script type="module" crossorigin src="/compound-interest-calculator/assets/index-Ccf3NXyr.js"></script>
+    <link rel="stylesheet" crossorigin href="/compound-interest-calculator/assets/index-xIUzCra0.css">
   </head>
   <body>
     <div id="root"></div>
